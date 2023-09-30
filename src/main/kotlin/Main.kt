@@ -85,6 +85,37 @@ fun main() {
     }
     println()
     println(sum(2, 4*2))
+    val stringOfValue = when (now){
+        6 -> "value is 6"
+        7 -> {
+            println("Seven")
+            "value is 7"
+        }
+        8 -> "value is 8"
+        else -> "value cannot be reached"
+    }
+    println(stringOfValue)
+    val randomNum = (0..100).random()
+    val workHours = 7..15
+    when(randomNum){
+        in workHours -> println("value in work Hours")
+        !in workHours -> println("value outside of range")
+        else -> println("value is undefined")
+    }
+
+    val registerNumber = when(val regis = (1..100).random()){
+        in 1..50 -> {
+            println(regis)
+            50 * regis
+        }
+        in 51..100 -> {
+            println(regis)
+            100 * regis
+        }
+        else -> regis
+    }
+    println(registerNumber)
+    println(registerNumber is Int)
 }
 
 fun setUser(name: String, age: Number): String {
