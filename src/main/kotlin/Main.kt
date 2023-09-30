@@ -116,6 +116,19 @@ fun main() {
     }
     println(registerNumber)
     println(registerNumber is Int)
+    var genap = (2..100).random()
+    if (genap % 2 == 1) genap++
+    println(genap)
+
+    val ganjil = 1..100 step 2
+    ganjil.forEach(::println)
+    ganjil.forEach {
+        print("$it ")
+    }
+    val numRange = 1.rangeTo(10)
+    val numDown = 10.downTo(1)
+    println(Random().nextInt(100))
+   
 }
 
 fun setUser(name: String, age: Number): String {
