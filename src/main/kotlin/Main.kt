@@ -83,6 +83,8 @@ fun main() {
         if (i == null) break
         print(i)
     }
+    println()
+    println(sum(2, 4*2))
 }
 
 fun setUser(name: String, age: Number): String {
@@ -95,3 +97,5 @@ enum class Color(val value: Int){
     RED(0xFF0000),
     WHITE(0xFFFFFF)
 }
+
+fun sum (value1: Int, value2: Int) = value1 + value2
