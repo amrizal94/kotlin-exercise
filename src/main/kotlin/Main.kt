@@ -53,15 +53,18 @@ fun main() {
     println(text?.length)
     println(text)
     println("Office ${if (now in 9..17)"is Open" else "is close"}")
-    val colorBlue = Color.Blue
+    val colorRed = Color.RED
     val color = Color.entries.random()
+    println(colorRed)
+    println(colorRed.value.toString(16))
+    println("Posisi warna $colorRed adalah ${colorRed.ordinal}")
 
 
     when(color){
-        Color.White -> println("the color you pick is White")
-        Color.Green -> println("the color you pick is Green")
-        Color.Red -> println("the color you pick is Red")
-        Color.Blue -> println("the color you pick is Blue")
+        Color.WHITE -> println("the color you pick is White")
+        Color.GREEN -> println("the color you pick is Green")
+        Color.RED -> println("the color you pick is Red")
+        Color.BLUE -> println("the color you pick is Blue")
         else -> {
             println("another color")
             println("another is missing")
@@ -87,8 +90,8 @@ fun setUser(name: String, age: Number): String {
 }
 
 enum class Color(val value: Int){
-    Blue(0x0000FF),
-    Green(0x00FF00),
-    Red(0xFF0000),
-    White(0xFFFFFF)
+    BLUE(0x0000FF),
+    GREEN(0x00FF00),
+    RED(0xFF0000),
+    WHITE(0xFFFFFF)
 }
