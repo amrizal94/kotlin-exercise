@@ -6,6 +6,11 @@ class Users(val name: String, val age: Byte){
 }
 
 data class DataUser(val name: String, val age: Byte)
+data class DataUserIntro(val name: String, val age: Byte){
+    fun intro(): Unit {
+        println("My name $name, I am $age years old")
+    }
+}
 
 fun main() {
     val user1 = User("Umam", 17)
@@ -18,4 +23,8 @@ fun main() {
     println(user1)
     println(user2)
     println(dataUser1)
+    val (name, age) = user4
+    println("my name is $name, i am $age years age")
+    val user5 = DataUserIntro(name, age)
+    user5.intro()
 }
