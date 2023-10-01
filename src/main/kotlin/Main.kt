@@ -132,6 +132,14 @@ fun main() {
     for ((index, value) in numDown.withIndex()) println("value $value with index $index")
     println(Random().nextInt(100))
 
+    loopLuar@ for (i in 1..10){
+        println("Loop Luar")
+        for (j in 1..10){
+            println("Loop dalam")
+            if (j > 3)break@loopLuar
+        }
+    }
+
 }
 
 fun setUser(name: String, age: Number): String {
