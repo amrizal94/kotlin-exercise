@@ -126,9 +126,12 @@ fun main() {
         print("$it ")
     }
     val numRange = 1.rangeTo(10)
+    numRange.forEachIndexed { index, i -> println("value $i, with index $index") }
     val numDown = 10.downTo(1)
+    println()
+    for ((index, value) in numDown.withIndex()) println("value $value with index $index")
     println(Random().nextInt(100))
-   
+
 }
 
 fun setUser(name: String, age: Number): String {
