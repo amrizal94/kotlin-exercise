@@ -10,6 +10,8 @@
 
 package com.dicoding.exam.latihanopsional5
 
+import com.dicoding.exam.latihan5.sum
+
 /**
  *  TODO
  *  Ubahlah fungsi concatString() menjadi sebuah lambda expression yang dapat menggabungkan dua buah string.
@@ -37,6 +39,6 @@ fun main() {
  * Pastikan tidak mengubah nama 'concatString'
  */
 
-fun concatString(string1: String, string2: String): String {
-    return ""
+val concatString:(String, String) -> String = {
+    s1, s2 ->  s1 + s2
 }

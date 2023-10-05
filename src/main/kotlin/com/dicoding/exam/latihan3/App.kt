@@ -30,7 +30,13 @@ package com.dicoding.exam.latihan3
  *
  */
 fun <T> checkType(args: T): String {
-    return "Yes! it's ${args!!::class.simpleName}"
+    if (args.toString().toIntOrNull() !=null) return "Yes! it's Integer"
+    val typeName = args!!::class.simpleName
+    return when(args){
+        is Map<*, *> -> "Yes! it's Map"
+        is List<*> -> "Yes! it's List"
+        else -> "Yes! it's $typeName"
+    }
 }
 
 fun main() {
