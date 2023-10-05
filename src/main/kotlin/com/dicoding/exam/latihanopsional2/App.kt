@@ -12,6 +12,8 @@
 
 package com.dicoding.exam.latihanopsional2
 
+import com.dicoding.exam.latihan5.sum
+
 /**
  *  TODO
  *  Lengkapi fungsi di bawah dengan ketentuan sebagai berikut:
@@ -28,7 +30,11 @@ package com.dicoding.exam.latihanopsional2
  */
 
 fun minAndMax(number: Int): Int {
-    return 0
+    val length = number.toString().length
+    if (length !in 2..9) return 0
+    val maxBy = number.toString().maxBy { it }.digitToInt()
+    val minBy = number.toString().minBy { it }.digitToInt()
+    return maxBy + minBy
 }
 
 fun main() {

@@ -30,7 +30,13 @@ package com.dicoding.exam.latihanopsional3
  */
 
 fun manipulateString(str: String, int: Int): String {
-    return ""
+    val words = StringBuilder()
+    val numbers = StringBuilder()
+    str.forEach {
+        if (it.isDigit()) numbers.append(it) else words.append(it)
+    }
+    return "$words${int * (numbers.toString().toIntOrNull()?:1)}"
+
 }
 
 fun main() {

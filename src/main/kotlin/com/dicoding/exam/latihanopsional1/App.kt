@@ -28,7 +28,8 @@ package com.dicoding.exam.latihanopsional1
  */
 
 fun sumOfBigThree(vararg numbers: Int): Int {
-    return 0
+    numbers.sort()
+    return numbers.takeLast(3).sum()
 }
 
 fun main() {
